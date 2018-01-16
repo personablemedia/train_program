@@ -50,10 +50,10 @@ var config = {
       console.log(childSnapshot.val().next_arrival);
 
       // Change the HTML
-      $("#fullTrainSchedule").append("<div class='well'><span class='name'> " + childSnapshot.val().name +
-        " </span><span class='destination'> " + childSnapshot.val().destination +
-        " </span><span class='frequency'> " + childSnapshot.val().frequency +
-        " </span><span class='next_arrival'> " + childSnapshot.val().next_arrival + "</span></div>");
+      $("#fullTrainSchedule").append("<div class='col-md-3 train-name'>" + childSnapshot.val().name +
+        "</div><div class='col-md-3 destination'>" + childSnapshot.val().destination +
+        "</div><div class='col-md-3 frequency'>" + childSnapshot.val().frequency +
+        "</div><div class='col-md-3 next-arrival'>" + childSnapshot.val().next_arrival + "</div>");
 
 
       // If any errors are experienced, log them to console.
